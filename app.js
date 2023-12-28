@@ -27,7 +27,7 @@ const questions = [
         "question": "What is the largest mammal in the world?",
         answers: [
             { text: "Elephant", correct: "false" },
-            { text: "Whale Shark", correct: "true" },
+            { text: "Whale Shark", correct: "false" },
             { text: "Blue Whale", correct: "true" },
             { text: "Giraffe", correct: "false" },
         ]
@@ -286,7 +286,7 @@ function selectAnswer(e) {
 
 function showScore() {
     resetState();
-    questionElement.innerHTML = `You scored ${score} out of 10!`
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`
     nextBtn.innerHTML = 'Play Again';
     nextBtn.style.display = 'block'
 }
